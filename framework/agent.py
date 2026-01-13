@@ -1,10 +1,14 @@
+from .decision_engine import DecisionEngine
+
+
 class Agent:
     def __init__(self,name:str,capabilities:list = None):
-
         self.name = name
         self.capabilities = capabilities if capabilities is not None else []
         self.memory ={}
         self.environment = None #will be set when the agent is added to an environment
+        #mulinm agent wwa create krpu gmn eyw environment ekakat add krn kl eyge environment ek None
+        self.decision_engine = DecisionEngine() # to give the agent a brain
 
     def perceive(self):
 
@@ -19,7 +23,7 @@ class Agent:
     def decide(self,perception:dict):
 
         print(f"[{self.name}] is deciding...")
-        decision = "No_action_yet"
+        decision = self.decision_engine.make_decision(perception, self.memory, self.capabilities)
         print(f"[{self.name}] decided to: {decision}")
         return decision
     
