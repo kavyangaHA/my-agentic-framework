@@ -8,7 +8,7 @@ class Environment:
     def add_agent(self, agent):
         if agent not in self.agents:
             self.agents.append(agent)
-            agent.environment = self
+            agent.environment = self #Set the agent's environment to this environment(linking agent to environment)
             print(f"Agent [{agent.name}] added to environment [{self.name}].")
         else:
             print(f"Agent [{agent.name}] is already in environment [{self.name}].") 
