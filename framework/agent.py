@@ -22,7 +22,7 @@ class Agent:
         if not self.environment:
             print(f"[{self.name}] has no environment to perceive.")
             return {}
-        perception = self.environment.get_state_for_agent(self.name)#environment cls ekedi agentwai 
+        perception = self.environment.get_state_for_agent(self.name)#environment cls ekedi agentwai environment ekai link krl thiyenne
         print(f"[{self.name}] perceived: {perception}")
         return perception
     
@@ -44,7 +44,7 @@ class Agent:
         print(f"\n-- starting cycle for [{self.name}] --")
         perception = self.perceive()
         decision = self.decide(perception)
-        self.act(decision)
+        #self.act(decision)
         action_result = self.act(decision)
         #store the result of the cycle in memory
         self.memory_system.store("last_action_result", action_result)
