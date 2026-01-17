@@ -2,7 +2,7 @@ from framework.agent import Agent
 from framework.environment import Environment
 
 env = Environment(name="Helper_Environment")
-helper_agent = Agent(name = "Helper_Agent", capabilities=["greeting","answer_question"] )
+helper_agent = Agent(name = "Helper_Agent", capabilities=["greeting","answer_question","clarify"] )
 env.add_agent(helper_agent)
 
 print("--- Agent Simulation Started ---")
@@ -28,3 +28,5 @@ while True:
     print("-"*20)
 
 print("--- Agent Simulation Ended ---")
+
+#C:\Users\MSII\Desktop\my_agentic_framework\venv\Scripts\python.exe main.py
