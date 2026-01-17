@@ -13,7 +13,9 @@ class ActionModule:
         self.actions = {
             "greeting": self._greeting,
             "answer_question": self._answer_question,
+            "clarify":self._clarify,
             "no_action": self._no_action,
+
         }
         print("ActionModule initialized.")
 
@@ -48,6 +50,9 @@ class ActionModule:
         """Returns a placeholder answer for a question."""
         return "That's a great question! I am still learning how to answer specific questions."
 
+    def _clarify(self,context:dict = None):
+        return "I'm not sure I understand. Could you please clarify it?"
+    
     def _no_action(self, context: dict = None):
         """Handles cases where no specific action is chosen."""
         return "I am not sure how to respond to that."
