@@ -49,4 +49,3 @@ class Agent:
         #store the result of the cycle in memory
         self.memory_system.store("last_action_result", action_result)
         print(f"--cycle for [{self.name}] finished --\n")
-
